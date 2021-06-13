@@ -14,7 +14,7 @@
 	<name>springboot-thymeleaf-crud-web-app</name>
 	<description>PRT Tracker Employee Management Solution</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -42,22 +42,29 @@
 		</dependency>
 	  
 	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-                         <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <configuration>
-                <source>1.8</source>
-                <target>1.8</target>
-            </configuration>
-        </plugin>
-		</plugins>
-	</build>
+        
+        <build>
+        <plugins>
+          <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>build-info</goal>
+                </goals>
+                <configuration>
+                  <additionalProperties>
+                    <encoding.source>${project.build.sourceEncoding}</encoding.source>
+                    <encoding.reporting>${project.reporting.outputEncoding}</encoding.reporting>
+                    <java.source>${maven.compiler.source}</java.source>
+                    <java.target>${maven.compiler.target}</java.target>
+                  </additionalProperties>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
 
 </project>
