@@ -12,4 +12,4 @@ public class SpringbootThymeleafCrudWebAppApplication {
 
 }
 
-// This is the main program for prtapp
+// This is the main program for prtclient
