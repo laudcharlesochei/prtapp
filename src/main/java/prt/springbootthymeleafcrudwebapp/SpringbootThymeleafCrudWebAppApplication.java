@@ -11,7 +11,5 @@ public class SpringbootThymeleafCrudWebAppApplication {
 	}
 
 }
-
-// This is the main program for prtclient
-// This is for testing prtclient
-// This is to show Glen and Ryan
+        
+   
